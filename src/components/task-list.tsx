@@ -56,7 +56,7 @@ export function TaskList({ tasks }: { tasks: Task[] }) {
     <>
       <div>
         <section className={styles.counter}>
-          <div className={styles.taskLabel}>{countActiveTask()} tasks</div>
+          <div className={styles.taskLabel}>{countActiveTask()} {countActiveTask() <= 1 ? `task` : `tasks`}</div>
         </section>
         <section className={styles.section}>
           {tasksList.map((task) => (
